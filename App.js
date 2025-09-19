@@ -30,10 +30,6 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {/* ハンバーガーメニュー */}
-      <TouchableOpacity style={styles.menuButton} onPress={() => alert('メニューが押されました')} activeOpacity={0.7}>
-        <Text style={styles.menuIcon}>≡</Text>
-      </TouchableOpacity>
       <Calendar
         style={styles.calendar}
         current={new Date().toISOString().split('T')[0]}
@@ -73,21 +69,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  menuButton: {
-    position: 'absolute',
-    top: 30,
-    left: 20,
-    zIndex: 20,
-    backgroundColor: 'rgba(255,255,255,0.8)',
-    borderRadius: 20,
-    padding: 8,
-    elevation: 8,
-  },
-  menuIcon: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#333',
-  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
